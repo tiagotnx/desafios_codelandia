@@ -19,7 +19,7 @@ This project was developed using the following technologies:
 
 You can view the project through the links below:
 
-- [Live Preview]()
+- [Live Preview](https://codelandia-art.netlify.app/)
 
 - [Figma](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?node-id=93571%3A1385)
 
