@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --font-inter: "Inter", sans-serif;
+    --font-nunito: "Nunito", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+
+    --color-font-title: #0c0c0c;
+    --color-font-subtitle-header: #737373;
+    --color-font-title-card-button: #f9f9f9;
+    --color-font-description-card: #ebebeb;
+    --color-button-background: #3772ff;
+    --color-button-background-hover: #2e6ce5;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(100%, 75rem);
+    margin: 2.5rem auto 5rem;
+}
+
+.logo {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    color: var(--color-font-title);
+    font-size: 2rem;
+}
+
+.header .header__form {
+    display: flex;
+    width: min(100%, 40.25rem);
+    position: relative;
+    align-items: center;
+}
+
+.header .header__form .header__input {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--color-font-description-card);
+    font-family: var(--font-poppins);
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--color-font-subtitle-header);
+    padding: 0 0 0 1.5rem;
+}
+
+.header .header__form .header__formButton {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0.75rem;
+    cursor: pointer;
+    color: var(--color-font-subtitle-header);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11.75rem;
+    height: 2.5rem;
+    background: var(--color-button-background);
+    border-radius: 0.25rem;
+    font-family: var(--font-nunito);
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--color-font-title-card-button);
+    text-transform: uppercase;
+    transition: 0.1s ease-in-out;
+}
+
+.button:hover {
+    background: var(--color-button-background-hover);
+}
+
+/* Main */
+/* Section Title */
+
+.main {
+    width: min(100%, 75rem);
+    margin: 0 auto;
+}
+
+.main .sectionTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .sectionTitle > img {
+    width: 24.75rem;
+    height: 27.25rem;
+}
+
+.main .sectionTitle .sectionTitle__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: min(100%, 36rem);
+}
+
+.main .sectionTitle .sectionTitle__container .sectionTitle_title {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--color-font-title);
+}
+
+.main .sectionTitle .sectionTitle__container .sectionTitle__subtitle {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--color-font-subtitle-header);
+}
+
+.main .sectionTitle .sectionTitle__container .sectionTitle__info {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 1rem 0 0 0;
+}
+
+.main
+    .sectionTitle
+    .sectionTitle__container
+    .sectionTitle__info
+    .sectionTitle__info_title {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--color-font-title);
+    text-align: center;
+}
+
+.main
+    .sectionTitle
+    .sectionTitle__container
+    .sectionTitle__info
+    .sectionTitle__info_text {
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-font-subtitle-header);
+    text-align: center;
+}
+
+/* Section Title */
+
+.collection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem 0 0 0;
+}
+
+.collection .collection__container {
+    display: flex;
+    justify-content: center;
+    gap: 3.375rem;
+}
+
+.collection .collection__container > img {
+    width: 12.5rem;
+    height: 12.125rem;
+}
+
+.collection .collection__title_container {
+    width: min(100%, 24.75rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title2 {
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--color-font-title);
+}
+
+/* Section Artists */
+
+.artists {
+    margin: 5rem 0 0 0;
+}
+
+.artists .artists__list {
+    margin: 2.5rem 0 0 0;
+    width: 100%;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.artists .artists__list .artists__img {
+    width: min(100%, 33.33%);
+    height: 30.25rem;
+    margin: 0 0 5rem 0;
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.artists .artists__list .artist_1 {
+    background-image: url("/assets/images/img.webp");
+}
+
+.artists .artists__list .artist_2 {
+    background-image: url("/assets/images/img_4.webp");
+}
+
+.artists .artists__list .artist_3 {
+    background-image: url("/assets/images/img_5.webp");
+}
+
+.artists .artists__list .artists__name {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--color-font-title-card-button);
+}
+
+.artists .artists__list .artists__description {
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--color-font-description-card);
+    margin: 0.5rem 0 0 0;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 5rem 0;
+}
+
+.footer .footer__menu {
+    display: flex;
+    gap: 3.5625rem;
+}
+
+.footer .footer__menu .item__menu {
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--color-font-title);
+    text-transform: uppercase;
+}
