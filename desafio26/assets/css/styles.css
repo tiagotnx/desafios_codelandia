@@ -262,4 +262,9 @@
     font-size: 1.125rem;
     color: var(--color-font-title);
     text-transform: uppercase;
+    transition: 0.1s all;
+}
+
+.footer .footer__menu .item__menu:hover {
+    border-bottom: 2px solid var(--color-font-title);
 }
