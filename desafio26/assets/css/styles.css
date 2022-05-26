@@ -106,7 +106,7 @@ body {
 
 .main .sectionTitle > img {
     width: min(100%, 33.33%);
-    aspect-ratio: 9/10.5;
+    height: auto;
     margin: 0 0 0 1rem;
 }
 
@@ -181,7 +181,7 @@ body {
 
 .collection .collection__container > img {
     width: 33.33%;
-    aspect-ratio: 1;
+    height: auto;
 }
 
 .collection .collection__title_container {
@@ -350,7 +350,7 @@ body {
 
     .collection .collection__container > img {
         width: 100%;
-        aspect-ratio: 14/9;
+        height: auto;
     }
 
     .collection .collection__title_container {
