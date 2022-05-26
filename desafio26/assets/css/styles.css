@@ -19,6 +19,10 @@
     --color-button-background-hover: #2e6ce5;
 }
 
+body {
+    padding: 1.5rem;
+}
+
 /* Header */
 
 .header {
@@ -38,7 +42,7 @@
 
 .header .header__form {
     display: flex;
-    width: min(100%, 40.25rem);
+    width: clamp(20rem, 55%, 40.25rem);
     position: relative;
     align-items: center;
 }
@@ -101,8 +105,9 @@
 }
 
 .main .sectionTitle > img {
-    width: 24.75rem;
-    height: 27.25rem;
+    width: min(100%, 33.33%);
+    aspect-ratio: 9/10.5;
+    margin: 0 0 0 1rem;
 }
 
 .main .sectionTitle .sectionTitle__container {
@@ -116,14 +121,14 @@
 .main .sectionTitle .sectionTitle__container .sectionTitle_title {
     font-family: var(--font-inter);
     font-weight: 600;
-    font-size: 3rem;
+    font-size: clamp(2rem, 3.5vw, 3rem);
     color: var(--color-font-title);
 }
 
 .main .sectionTitle .sectionTitle__container .sectionTitle__subtitle {
     font-family: var(--font-inter);
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: var(--color-font-subtitle-header);
 }
 
@@ -141,7 +146,7 @@
     .sectionTitle__info_title {
     font-family: var(--font-inter);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--color-font-title);
     text-align: center;
 }
@@ -168,18 +173,19 @@
 }
 
 .collection .collection__container {
+    width: clamp(20rem, 55vw, 44.375rem);
     display: flex;
-    justify-content: center;
-    gap: 3.375rem;
+    justify-content: space-between;
+    gap: clamp(1rem, 3vw, 3.5rem);
 }
 
 .collection .collection__container > img {
-    width: 12.5rem;
-    height: 12.125rem;
+    width: 33.33%;
+    aspect-ratio: 1;
 }
 
 .collection .collection__title_container {
-    width: min(100%, 24.75rem);
+    width: clamp(12rem, 31vw, 24.75rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -188,7 +194,7 @@
 .title2 {
     font-family: var(--font-inter);
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     color: var(--color-font-title);
 }
 
@@ -207,7 +213,7 @@
 
 .artists .artists__list .artists__img {
     width: min(100%, 33.33%);
-    height: 30.25rem;
+    aspect-ratio: 9/12;
     margin: 0 0 5rem 0;
     border-radius: 0.25rem;
     padding: 1.5rem;
@@ -231,7 +237,7 @@
 .artists .artists__list .artists__name {
     font-family: var(--font-inter);
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.075vw, 1.5rem);
     color: var(--color-font-title-card-button);
 }
 
@@ -247,19 +253,20 @@
 
 .footer {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 0 0 5rem 0;
 }
 
 .footer .footer__menu {
     display: flex;
-    gap: 3.5625rem;
+    gap: clamp(2.3rem, 2vw, 3.5625rem);
 }
 
 .footer .footer__menu .item__menu {
     font-family: var(--font-inter);
     font-weight: 500;
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 2vw, 1.125rem);
     color: var(--color-font-title);
     text-transform: uppercase;
     transition: 0.1s all;
@@ -267,4 +274,145 @@
 
 .footer .footer__menu .item__menu:hover {
     border-bottom: 2px solid var(--color-font-title);
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        margin: 0 auto 3rem;
+    }
+
+    .header .button {
+        width: 6.25rem;
+        height: 1.5rem;
+        font-size: 0.625rem;
+    }
+
+    .header .header__form {
+        display: none;
+    }
+
+    .main .sectionTitle > img {
+        display: none;
+    }
+
+    .main .sectionTitle .sectionTitle__container {
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .main .sectionTitle .sectionTitle__container .button {
+        width: 100%;
+        height: 2rem;
+        font-size: 0.625rem;
+        margin: 1rem 0 0 0;
+    }
+
+    .main .sectionTitle .sectionTitle__container .sectionTitle_title {
+        font-size: 1.5rem;
+    }
+
+    .main .sectionTitle .sectionTitle__container .sectionTitle__subtitle {
+        font-size: 0.875rem;
+    }
+
+    .main .sectionTitle .sectionTitle__container .sectionTitle__info {
+        width: 100%;
+        gap: unset;
+        justify-content: space-between;
+        margin: 2rem 0 0 0;
+    }
+
+    .main
+        .sectionTitle
+        .sectionTitle__container
+        .sectionTitle__info
+        .sectionTitle__info_title {
+        font-size: 1.5rem;
+    }
+
+    .main
+        .sectionTitle
+        .sectionTitle__container
+        .sectionTitle__info
+        .sectionTitle__info_text {
+        font-size: 0.875rem;
+    }
+
+    .collection {
+        margin: 2.5rem 0 0 0;
+        flex-direction: column;
+    }
+
+    .collection .collection__container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .collection .collection__container > img {
+        width: 100%;
+        aspect-ratio: 14/9;
+    }
+
+    .collection .collection__title_container {
+        margin: 2rem 0 0 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .collection .collection__title_container .button {
+        width: 100%;
+        height: 2rem;
+        font-size: 0.625rem;
+    }
+
+    .artists {
+        margin: 3rem 0 0 0;
+    }
+
+    .artists .artists__list {
+        margin: 1.5rem 0 2.5rem 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .artists .artists__list .artists__img {
+        width: 100%;
+        aspect-ratio: 9/14;
+        margin: 0;
+    }
+
+    .artists .artists__list .artists__img .artists__name {
+        font-size: 1.375rem;
+    }
+
+    .title2 {
+        font-size: 1.25rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .footer > nav {
+        width: 100%;
+    }
+
+    .footer .footer__menu {
+        width: 100%;
+        gap: unset;
+        justify-content: space-between;
+    }
+
+    .footer .footer__menu .item__menu {
+        font-size: 0.75rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
 }

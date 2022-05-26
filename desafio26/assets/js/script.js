@@ -1,4 +1,8 @@
-ScrollReveal().reveal(".header", { delay: 200, duration: 1000 });
+ScrollReveal().reveal(".header", {
+    scale: 0.95,
+    delay: 200,
+    duration: 1000,
+});
 ScrollReveal().reveal(".sectionTitle", {
     delay: 200,
     distance: "50px",
