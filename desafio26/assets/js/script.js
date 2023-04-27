@@ -8,6 +8,11 @@ ScrollReveal().reveal(".sectionTitle", {
     distance: "50px",
     duration: 1000,
 });
+ScrollReveal().reveal(".collection__title_container", {
+    delay: 200,
+    distance: "50px",
+    duration: 1000,
+});
 ScrollReveal().reveal(".collection", {
     delay: 200,
     distance: "50px",
