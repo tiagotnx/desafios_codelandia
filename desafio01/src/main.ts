@@ -4,7 +4,7 @@ const main = document.querySelector("#main");
 const formSearch = document.querySelector("#search");
 const inputSearch: HTMLInputElement = document.querySelector("#search > input");
 
-async function getPosts(): Promise<Response[]> {
+async function getPosts(): Promise<Response> {
     const response = await fetch(
         `https://api.spaceflightnewsapi.net/v4/articles/?title_contains=${inputSearch.value}`
     );
@@ -18,7 +18,7 @@ getPosts()
 
 const loadArticles = (data) => {
     const posts: Article[] = data.results;
-    posts.forEach((post) => {
+    posts.forEach((post: Article) => {
         const hoje = new Date(post.published_at);
 
         const formattedDate = hoje.toLocaleDateString("pt-BR", {
