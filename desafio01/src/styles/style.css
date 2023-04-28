@@ -36,30 +36,22 @@ body {
     padding: 40px 20px;
 }
 
-.header-nav {
+.header-container {
     justify-content: space-between;
     align-items: center;
     width: min(900px, 100%);
     justify-self: center;
 }
 
-.header-nav h1 {
+.header-container h1 {
     font-size: 1.5em;
     color: var(--clr-white);
     font-weight: normal;
 }
 
-.header-nav a {
-    text-decoration: none;
+.header-container p {
     color: var(--clr-white);
     font-size: 1.5em;
-    padding: 0.175rem 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.1s;
-}
-
-.header-nav a:is(:hover, :focus) {
-    background-color: var(--clr-background-input);
 }
 
 .header-form {
@@ -76,6 +68,7 @@ body {
     padding: 20px 0 20px 64px;
     outline: none;
     transition: outline 0.1s;
+    color: var(--clr-white);
 }
 
 .header-form input::placeholder {
@@ -162,6 +155,10 @@ main {
 
 main:has(article:hover) article:not(:hover) {
     opacity: 0.9;
+}
+
+.anything {
+    color: var(--clr-gray-dark);
 }
 
 @media (max-width: 768px) {
