@@ -45,12 +45,12 @@ body {
 
 .header-container h1 {
     font-size: 1.5em;
-    color: var(--clr-white);
+    color: #f3f3f3;
     font-weight: normal;
 }
 
 .header-container p {
-    color: var(--clr-white);
+    color: #f3f3f3;
     font-size: 1.5em;
 }
 
@@ -68,7 +68,7 @@ body {
     padding: 20px 0 20px 64px;
     outline: none;
     transition: outline 0.1s;
-    color: var(--clr-white);
+    color: #f3f3f3;
 }
 
 .header-form input::placeholder {
@@ -123,7 +123,7 @@ main {
     transition: scale 0.2s;
 }
 
-.card:hover {
+.card:is(:hover, :focus) {
     scale: 1.02;
 }
 
@@ -151,10 +151,6 @@ main {
     color: var(--clr-gray);
     font-size: 1.125em;
     line-height: 32px;
-}
-
-main:has(article:hover) article:not(:hover) {
-    opacity: 0.9;
 }
 
 .anything {
@@ -190,15 +186,21 @@ main:has(article:hover) article:not(:hover) {
         padding: 50px 20px;
     }
 }
-/* @media (prefers-color-scheme: light) {
+
+/* @media (prefers-color-scheme: dark) {
     :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
+        --clr-purple: #574ae8;
+        --clr-linear-gradient: linear-gradient(
+            270deg,
+            #3ea1db 0%,
+            #574ae8 100%
+        );
+        --clr-background: #181818;
+        --clr-background-input: rgba(0, 0, 0, 0.2);
+        --clr-placeholder: rgba(255, 255, 255, 0.5);
+        --clr-white: #252525;
+        --clr-white-200: #f3f3f3;
+        --clr-gray: #b6b6b6;
+        --clr-gray-dark: #f3f3f3;
     }
 } */

@@ -4,13 +4,13 @@ const main = document.querySelector("#main");
 const formSearch = document.querySelector("#search");
 const inputSearch: HTMLInputElement = document.querySelector("#search > input");
 
-async function getPosts(): Promise<Response> {
+const getPosts = async (): Promise<Response> => {
     const response = await fetch(
         `https://api.spaceflightnewsapi.net/v4/articles/?title_contains=${inputSearch.value}`
     );
     const data = await response.json();
     return data;
-}
+};
 
 getPosts()
     .then((data) => loadArticles(data))
@@ -19,9 +19,9 @@ getPosts()
 const loadArticles = (data) => {
     const posts: Article[] = data.results;
     posts.forEach((post: Article) => {
-        const hoje = new Date(post.published_at);
+        const date = new Date(post.published_at);
 
-        const formattedDate = hoje.toLocaleDateString("pt-BR", {
+        const formattedDate = date.toLocaleDateString("pt-BR", {
             day: "2-digit",
             month: "2-digit",
             year: "numeric",
@@ -63,7 +63,7 @@ const filterPosts = () => {
     getPosts()
         .then((data) => {
             if (data.count === 0) {
-                main.innerHTML = '<p class="anything">Nada encontrado</p>';
+                main.innerHTML = '<p class="anything">Nada encontrado.</p>';
                 return;
             }
             loadArticles(data);
