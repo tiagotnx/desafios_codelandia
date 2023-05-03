@@ -1,12 +1,22 @@
-import { Article, Response } from "./types";
+import { ArticleV3 } from "./types";
 
 const main = document.querySelector("#main");
 const formSearch = document.querySelector("#search");
 const inputSearch: HTMLInputElement = document.querySelector("#search > input");
 
-const getPosts = async (): Promise<Response> => {
+const convertDate = (date) => {
+    const formattedDate = date.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    });
+
+    return formattedDate;
+};
+
+const getPosts = async (): Promise<ArticleV3[]> => {
     const response = await fetch(
-        `https://api.spaceflightnewsapi.net/v4/articles/?title_contains=${inputSearch.value}`
+        `https://api.spaceflightnewsapi.net/v3/articles/?title_contains=${inputSearch.value}`
     );
     const data = await response.json();
     return data;
@@ -17,20 +27,13 @@ getPosts()
     .catch((error) => console.error(error));
 
 const loadArticles = (data) => {
-    const posts: Article[] = data.results;
-    posts.forEach((post: Article) => {
-        const date = new Date(post.published_at);
-
-        const formattedDate = date.toLocaleDateString("pt-BR", {
-            day: "2-digit",
-            month: "2-digit",
-            year: "numeric",
-        });
+    data.forEach((post: ArticleV3) => {
+        const date = convertDate(new Date(post.updatedAt));
 
         let template = `
                 <article class="card">
                     <header class="flex card-header">
-                        <p class="card-date">${formattedDate}</p>
+                        <p class="card-date">${date}</p>
                         <svg
                             id="icon"
                             viewBox="0 0 200 200"
@@ -62,7 +65,7 @@ const filterPosts = () => {
     main.innerHTML = "";
     getPosts()
         .then((data) => {
-            if (data.count === 0) {
+            if (data.length === 0) {
                 main.innerHTML = '<p class="anything">Nada encontrado.</p>';
                 return;
             }

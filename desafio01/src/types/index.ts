@@ -1,4 +1,4 @@
-export interface Article {
+export interface ArticleV4 {
     id: number;
     title: string;
     url: string;
@@ -7,6 +7,20 @@ export interface Article {
     summary: string;
     published_at: string;
     updated_at: string;
+    featured: boolean;
+    launches: Launch[];
+    events: Event[];
+}
+
+export interface ArticleV3 {
+    id: number;
+    title: string;
+    url: string;
+    imageUrl: string;
+    newsSite: string;
+    summary: string;
+    publishedAt: Date;
+    updatedAt: Date;
     featured: boolean;
     launches: Launch[];
     events: Event[];
@@ -23,5 +37,5 @@ export interface Response {
     count: number;
     next: string | null;
     previous: string | null;
-    results: Article[];
+    results: ArticleV3[];
 }
