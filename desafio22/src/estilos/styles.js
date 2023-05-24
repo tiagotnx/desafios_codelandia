@@ -110,7 +110,7 @@ export const Titulo = styled.h2`
 
     @media only screen and (max-width: 725px) {
         & {
-            font-size: 48px;
+            font-size: 2.25rem;
         }
     }
 `;
