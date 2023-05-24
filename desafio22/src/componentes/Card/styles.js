@@ -16,11 +16,11 @@ export const CardStyles = styled.li`
         & {
             width: 100%;
         }
+    }
 `;
 
 export const Imagem = styled.img`
     width: 100%;
-    height: 222px;
     margin: 0 auto;
     border-radius: 4px;
     object-fit: cover;
@@ -50,7 +50,7 @@ export const DivButton = styled.div`
 
     @media only screen and (max-width: 420px) {
         & {
-          flex-direction: column;
+            flex-direction: column;
         }
-      }
-`
+    }
+`;

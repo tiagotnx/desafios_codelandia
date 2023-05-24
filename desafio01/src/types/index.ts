@@ -26,12 +26,12 @@ export interface ArticleV3 {
     events: Event[];
 }
 
-export interface Launch {
+interface Launch {
     launch_id: string;
     provider: string;
 }
 
-export interface Event {}
+interface Event {}
 
 export interface Response {
     count: number;

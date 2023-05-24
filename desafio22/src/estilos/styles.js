@@ -11,9 +11,10 @@ export const Header = styled.header`
 
     @media only screen and (max-width: 725px) {
         & {
-          justify-content: center;
-          margin-top: 10px
+            justify-content: center;
+            margin-top: 10px;
         }
+    }
 `;
 
 export const Logo = styled.img`
@@ -28,8 +29,9 @@ export const Ul = styled.ul`
 
     @media only screen and (max-width: 725px) {
         & {
-          justify-content: center;
+            justify-content: center;
         }
+    }
 `;
 
 export const Li = styled.li`
@@ -46,8 +48,9 @@ export const UlCard = styled.ul`
 
     @media only screen and (max-width: 480px) {
         & {
-            margin: 64px auto 0;;
+            margin: 64px auto 0;
         }
+    }
 `;
 
 export const HeaderGit = styled.a`
@@ -78,6 +81,7 @@ export const HeaderGit = styled.a`
             margin-bottom: 5px;
             width: 248px;
         }
+    }
 `;
 
 export const DesComunidade = styled.section`
@@ -98,16 +102,17 @@ export const SubTitulo = styled.h1`
 export const Titulo = styled.h2`
     font-family: var(--font-ibm);
     font-weight: 600;
-    font-size: 64px;
+    font-size: 4rem;
     line-height: 130%;
     color: var(--light);
     margin-top: 12px;
-    max-width: 812px;
+    max-width: 900px;
 
     @media only screen and (max-width: 725px) {
         & {
             font-size: 48px;
         }
+    }
 `;
 
 export const Texto = styled.p`
@@ -123,6 +128,7 @@ export const Texto = styled.p`
         & {
             font-size: 20px;
         }
+    }
 `;
 
 export const SecCards = styled.section``;
@@ -137,11 +143,12 @@ export const Footer = styled.footer`
 
     @media only screen and (max-width: 480px) {
         & {
-          justify-content: center;
-          margin: 50px 0 25px 0;
-          flex-direction: column;
-          align-items: center;
+            justify-content: center;
+            margin: 50px 0 25px 0;
+            flex-direction: column;
+            align-items: center;
         }
+    }
 `;
 
 export const LogoP = styled.img`
@@ -156,8 +163,9 @@ export const AutorDiv = styled.div`
 
     @media only screen and (max-width: 480px) {
         & {
-          justify-content: center;
+            justify-content: center;
         }
+    }
 `;
 
 export const Autor = styled.p`
@@ -168,6 +176,7 @@ export const Autor = styled.p`
 
     @media only screen and (max-width: 480px) {
         & {
-          margin: 24px 0 0 0;
+            margin: 24px 0 0 0;
         }
+    }
 `;

@@ -22,64 +22,84 @@ import {
 function App() {
     return (
         <>
-                <GlobalStyles />
-                <Header>
-                    <Logo src="./images/logo.webp" alt="Codelândia"/>
-                    <nav>
-                        <Ul>
-                            <Li><HeaderGit href="https://github.com/TiagoTNX" target="_blank">meu github</HeaderGit> </Li>
-                            <Li><ButtonConvite link="https://discord.gg/wNCWTVuxyz" text="entrar na comunidade" target="_blank" /></Li>
-                        </Ul>
-                    </nav>
-                </Header>
-                <DesComunidade>
-                    <SubTitulo>comunidade dev</SubTitulo>
-                    <Titulo>Projetos da comunidade Codelândia</Titulo>
-                    <Texto>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec felis ligula, accumsan nec cursus in, eleifend sit
-                        amet dui.
-                    </Texto>
-                </DesComunidade>
-                <SecCards>
-                    <UlCard>
-                        <Card
-                            src={"/images/reactJS.webp"}
-                            titulo="Comunidade Dev"
-                            descricao="Página criada durante o desafio 22 da comunidade Codelândia e com o intuito de praticar ReactJS."
-                            link1={"http://comunidade-dev.vercel.app/"}
-                            link2={"https://github.com/TiagoTNX/Codelandia-desafio22"}
-                        />
-                        <Card
-                            src={"/images/nestJS.webp"}
-                            titulo="Desafio Back-end Alura"
-                            descricao="API-REST criada durante o desafio Back-End Alura. Foram utilizados NestJS, Prisma e TypeScript."
-                            link1={"#"}
-                            link2={"https://github.com/TiagoTNX/Desafio-Back-End-Alura"}
-                        />
-                        <Card
-                            src={"/images/markdown.webp"}
-                            titulo="README para o perfil do GitHub"
-                            descricao="README personalizado para o meu perfil do GitHub."
-                            link1={"https://github.com/TiagoTNX"}
-                            link2={"https://github.com/TiagoTNX/TiagoTNX"}
-                        />
-                        <Card
-                            src={"/images/reactJS.webp"}
-                            titulo="Matrix Chat"
-                            descricao="Tela de login criada durante a semana de imersão ReactJS da Alura que teve como tema matrix."
-                            link1={"http://matrix-chat-beta.vercel.app/"}
-                            link2={"https://github.com/TiagoTNX/Matrix_Chat"}
-                        />
-                    </UlCard>
-                </SecCards>
-                <Footer>
-                    <LogoP src="./images/logoP.webp" alt="Codelândia"/>
-                    <AutorDiv>
-                        <Autor> © - 2022 - TiagoTNX </Autor>
-                        <Autor>Codelândia</Autor>
-                    </AutorDiv>
-                </Footer>
+            <GlobalStyles />
+            <Header>
+                <Logo src='./images/logo.svg' alt='Codelândia' />
+                <nav>
+                    <Ul>
+                        <Li>
+                            <HeaderGit
+                                href='https://github.com/TiagoTNX'
+                                target='_blank'
+                            >
+                                meu github
+                            </HeaderGit>{" "}
+                        </Li>
+                        <Li>
+                            <ButtonConvite
+                                link='https://www.linkedin.com/in/tiagotnx/'
+                                text='LinkedIn'
+                                target='_blank'
+                            />
+                        </Li>
+                    </Ul>
+                </nav>
+            </Header>
+            <DesComunidade>
+                <SubTitulo>Tiago Nascimento da Silva</SubTitulo>
+                <Titulo>Desenvolvedor Front-end</Titulo>
+                <Texto>
+                    Sou desenvolvedor front-end com conhecimento
+                    intermediário/avançado em HTML, CSS e JavaScript. Neste
+                    portfólio, você pode ver alguns dos meus projetos mais
+                    recentes e interessantes que criei ou participei.
+                </Texto>
+            </DesComunidade>
+            <SecCards>
+                <UlCard>
+                    <Card
+                        src={"/images/art.webp"}
+                        titulo='Art'
+                        descricao='Página criada durante o desafio 26 da comunidade Codelândia e com o intuito de praticar HTML e CSS.'
+                        link1={"https://codelandia-art.netlify.app/"}
+                        link2={
+                            "https://github.com/tiagotnx/desafios_codelandia/tree/main/desafio26"
+                        }
+                    />
+                    <Card
+                        src={"/images/spacelandia.webp"}
+                        titulo='Spacelândia'
+                        descricao='Página criada durante o desafio 01 da comunidade Codelândia e com o intuito de praticar HTML, CSS e TS.'
+                        link1={"https://spacelandia.netlify.app/"}
+                        link2={
+                            "https://github.com/tiagotnx/desafios_codelandia/tree/main/desafio01"
+                        }
+                    />
+                    <Card
+                        src={"/images/controle-financeiro.webp"}
+                        titulo='Controle financeiro'
+                        descricao='Página criada com o intuito de praticar React, HTML, CSS e TS.'
+                        link1={"https://controle-financas-alpha.vercel.app/"}
+                        link2={"https://github.com/tiagotnx/controle-financas"}
+                    />
+                    <Card
+                        src={"/images/web3.webp"}
+                        titulo='Página de notícias'
+                        descricao='Página criada durante o desafio News homepage do site Frontend Mentor e com o intuito de praticar HTML, CSS e TS.'
+                        link1={"https://newshomepage-tiagotnx.netlify.app/"}
+                        link2={
+                            "https://github.com/TiagoTNX/frontend-mentor/tree/main/news-homepage-main"
+                        }
+                    />
+                </UlCard>
+            </SecCards>
+            <Footer>
+                <LogoP src='./images/logoP.svg' alt='logo no final da página' />
+                <AutorDiv>
+                    <Autor> © - 2023 - Tiago </Autor>
+                    <Autor>Codelândia</Autor>
+                </AutorDiv>
+            </Footer>
         </>
     );
 }
